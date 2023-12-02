@@ -1,0 +1,30 @@
+.kisgaleria {
+   
+    display:flex;
+   /*  flex-wrap:nowrap; */
+    gap:10px;
+    justify-content: flex-start;
+ 
+   /*  height: calc((100vw / 10) ); */
+    overflow: hidden;
+    overflow-x: scroll;
+   
+ 
+
+}
+.kisgaleria .kep {
+   
+    flex:0 0 24%;
+    aspect-ratio: 1.5;
+  /*   height: calc(100vw / 10); */
+    width: 100%;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.kisgaleria .kep img {
+   
+   
+    width: 100%;
+}
+
