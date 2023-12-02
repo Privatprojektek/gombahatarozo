@@ -1,39 +1,47 @@
 import React, { useState } from "react";
+import TextUrlapElem from "./TextUrlapElem";
 
 export default function GombaUrlap(props) {
-    let aktualisUrlapKomponens;
-    const [urlapAdat, setUrlapAdat] = useState(props.adat);
+    const [urlapAdat, setUrlapAdat] = useState(props.adat); 
+    const inputElemList=[]
+    {Object.keys(props.leiro).forEach((kulcs, index) => {
+       
+        inputElemList.push( <TextUrlapElem
+                key={index}
+                kulcs={kulcs}
+                obj={props.leiro[kulcs]}
+                adatValt={adatValt}
+                adat={urlapAdat[kulcs]}
+            />)
+      
 
+    
+    })}
     function submitGomb(event) {
         console.log(urlapAdat);
         event.preventDefault();
         props.submitGomb(urlapAdat);
     }
-    function adatValt(event) {
+    function adatValt(adat, id) {
         let a = urlapAdat;
-        a[event.target.id] = event.target.value;
+        a[id] = adat;
         console.log(a);
         setUrlapAdat(a);
     }
     return (
         <form onSubmit={submitGomb}>
-            {Object.keys(props.leiro).map((kulcs,index) => {
+            {Object.keys(props.leiro).map((kulcs, index) => {
                 return (
-                    <div class="mb-3 mt-3" key={index}>
-                        <label for={kulcs} class="form-label">
-                            {props.leiro[kulcs].megj}
-                        </label>
-                        <input
-                            type={props.leiro[kulcs].tipus}
-                            class="form-control"
-                            id={kulcs}
-                           
-                            name={kulcs}
-                            value={urlapAdat[kulcs]}
-                            onChange={adatValt}
-                        />
-                    </div>
+                    <TextUrlapElem
+                        key={index}
+                        kulcs={kulcs}
+                        obj={props.leiro[kulcs]}
+                        adatValt={adatValt}
+                        adat={urlapAdat[kulcs]}
+                    />
                 );
+
+            
             })}
 
             <input type="submit" class="btn btn-success" value="Küld" />
