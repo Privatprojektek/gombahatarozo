@@ -1,13 +1,8 @@
 .galeria {
     padding: 10px 0;
-    /*    display: flex;
-    flex-wrap: wrap;
-    gap:10px; */
+    
 }
-/* .galeria .kep {
-    /*   padding: 2px;
-    width: calc(25% - 10px); 
-*/
+
 .galeria img {
     width: 100%;
 }
@@ -16,12 +11,12 @@
     position: relative;
     padding: 0px;
     cursor: pointer;
+   
 }
 .nev {
     position: absolute;
     bottom: 15px;
     left: 15px;
-
     text-align: center;
 }
 

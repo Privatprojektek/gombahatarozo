@@ -12,7 +12,7 @@ function Galeria(props) {
 
 
                 return (
-                    <div className="kep rounded" key={index}>
+                    <div className="kep rounded" key={index} onClick={()=>kivalaszt(element)}>
                         <img src={element} alt="gomba" />
                     </div>
                 );
