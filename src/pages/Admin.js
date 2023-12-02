@@ -35,7 +35,7 @@ export default function Admin() {
         <main className="Admin">
             <section>
                 <GombaUrlap
-                    lista={gombaAdatLeiro}
+                    leiro={gombaAdatLeiro}
                     adat={urlapAdat}
                     submitGomb={submitGomb}
                 />

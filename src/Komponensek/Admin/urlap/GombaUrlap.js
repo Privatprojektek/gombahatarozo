@@ -1,29 +1,42 @@
+import React, { useState } from "react";
+
 export default function GombaUrlap(props) {
+    let aktualisUrlapKomponens;
+    const [urlapAdat, setUrlapAdat] = useState(props.adat);
 
-function submitGomb(event){
-    console.log("valami")
-    event.preventDefault()
-    props.submitGomb("helló")
-}
-
+    function submitGomb(event) {
+        console.log(urlapAdat);
+        event.preventDefault();
+        props.submitGomb(urlapAdat);
+    }
+    function adatValt(event) {
+        let a = urlapAdat;
+        a[event.target.id] = event.target.value;
+        console.log(a);
+        setUrlapAdat(a);
+    }
     return (
-        <form>
-            <div class="mb-3 mt-3">
-                <label for="email" class="form-label">
-                   Név
-                </label>
-                <input
-                    type="text"
-                    class="form-control"
-                    id="email"
-                    placeholder="Enter email"
-                    name="email"
-                />
-            </div>
+        <form onSubmit={submitGomb}>
+            {Object.keys(props.leiro).map((kulcs,index) => {
+                return (
+                    <div class="mb-3 mt-3" key={index}>
+                        <label for={kulcs} class="form-label">
+                            {props.leiro[kulcs].megj}
+                        </label>
+                        <input
+                            type={props.leiro[kulcs].tipus}
+                            class="form-control"
+                            id={kulcs}
+                           
+                            name={kulcs}
+                            value={urlapAdat[kulcs]}
+                            onChange={adatValt}
+                        />
+                    </div>
+                );
+            })}
 
-            <button type="submit" class="btn btn-success" onClick={submitGomb}>
-                Submit
-            </button>
+            <input type="submit" class="btn btn-success" value="Küld" />
         </form>
     );
 }
