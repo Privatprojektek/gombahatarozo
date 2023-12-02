@@ -8,7 +8,7 @@ function GombaFejlecSor(props) {
                     ""
                 );;
             })}
-            <th></th>
+            <th>Képek</th>
             <th></th>
             <th></th>
         </tr>

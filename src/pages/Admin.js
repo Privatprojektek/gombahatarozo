@@ -10,7 +10,8 @@ import GombaUrlap from "../Komponensek/Admin/urlap/GombaUrlap.js";
 export default function Admin() {
     const [kepLista, setKepLista] = useState(gombaAdat[0].kepek);
     const [cim, setCim] = useState(gombaAdat[0].nev);
-    const [urlapAdat, seturlapAdat] = useState({});
+
+    const [urlapAdat, seturlapAdat] = useState({nev:""});
 
     function kepmegjelenit(kepek, nev) {
         setKepLista(kepek);
@@ -23,17 +24,40 @@ export default function Admin() {
     function submitGomb(adat) {
         console.log(adat);
     }
-    function szerkeszt(adat){
-        console.log(adat)
-        seturlapAdat(adat)
+
+    function szerkeszt(index) {
+        console.log(gombaAdat[index]);
+        console.log(gombaAdat);
+        console.log(index);
+        seturlapAdat(gombaAdat[index]);
+        console.log(urlapAdat);
+        uj();
     }
-    function torol(adat){
-        console.log(adat)
-        seturlapAdat(adat)
+    function torol(adat) {
+        console.log(adat);
+        seturlapAdat(adat);
+    }
+    function bezar() {
+        document.getElementById("urlap").classList.add("elrejt");
+    }
+    function uj() {
+        document.getElementById("urlap").classList.remove("elrejt");
     }
     return (
         <main className="Admin">
             <section>
+                <button className="uj btn btn-success" onClick={uj}>
+                    🍄 Új gomba rögzítése
+                </button>
+            </section>
+            <section id="urlap" className="arnyek felugro elrejt">
+                <header>
+                    {" "}
+                    <h2>Kérem adja meg az adatokat! </h2>{" "}
+                    <button className="bezar btn btn-danger" onClick={bezar}>
+                        X
+                    </button>
+                </header>
                 <GombaUrlap
                     leiro={gombaAdatLeiro}
                     adat={urlapAdat}

@@ -1,9 +1,17 @@
+:root {
+    --barna: rgb(92, 16, 36);
+
+    --kozepbarna: rgb(218, 203, 199);
+    --vilagosbarna: #f4edeb;
+    --bs-table-accent-bg: red !important;
+}
+
 * {
     box-sizing: border-box;
 }
 
 .App-header {
-    background-color: rgb(42, 22, 12);
+    background-color: var(--barna);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,15 +21,50 @@
     padding: 10px;
 }
 
-.App-link, .nav-link {
-     color: rgb(92, 16, 36) !important; 
+.App-link,
+.nav-link {
+    color: var(--barna) !important;
 }
-.App-link:hover, .nav-link:hover {
-    color: rgb(206, 107, 41) !important; 
+.App-link:hover,
+.nav-link:hover {
+    color: var(--kozepbarna) !important;
 }
 .arnyek {
-    box-shadow: -2px 1px 10px 3px rgba(0,0,0,0.24);
-    -webkit-box-shadow: -2px 1px 10px 3px rgba(0,0,0,0.24);
-    -moz-box-shadow: -2px 1px 10px 3px rgba(0,0,0,0.24);
+    box-shadow: -2px 1px 10px 3px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: -2px 1px 10px 3px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: -2px 1px 10px 3px rgba(0, 0, 0, 0.24);
 }
 
+.btn-danger {
+    background-color: var(--barna) !important;
+    border: 1px solid var(--barna) !important;
+}
+
+/* Függőleges scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* scrollbar szélessége */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cac0bd; /* scrollbar szín */
+    background-color: var(--kozepbarna); /* scrollbar szín */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1eded; /* scrollbar háttérszín */
+    background-color: var(--vilagosbarna); /* scrollbar háttérszín */
+    border-radius: 5px;
+}
+
+
+/* ::-webkit-scrollbar-button {background-color:orange;
+height:5px,
+}  */
+
+
+
+
+/* ::-webkit-resizer {
+    background-color:#f1eded
+} */

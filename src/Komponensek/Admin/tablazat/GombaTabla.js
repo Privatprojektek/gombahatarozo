@@ -8,7 +8,7 @@ function GombaTabla(props) {
     }
     function szerkeszt(index) {
         console.log(index);
-        props.szerkeszt(index)
+        props.szerkeszt(index);
     }
     function kepmegjelenit(kepek, nev){
         props.kepmegjelenit(kepek, nev)
@@ -25,6 +25,7 @@ function GombaTabla(props) {
                            
                             <GombaSor
                                 key={index}
+                                index={index}
                                 obj={element}
                                 leiro={props.leirolista}
                                 torol={torol}

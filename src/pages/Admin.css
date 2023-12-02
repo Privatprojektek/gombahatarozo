@@ -1,4 +1,30 @@
 .Admin {
-  
-    padding: 10px!important;
+    padding: 10px !important;
+}
+#urlap {
+    /*  position: relative; */
+    width: 800px;
+}
+#urlap header {
+    position: relative;
+}
+.felugro {
+    position: fixed;  
+    padding: 10px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+   max-height: calc(100vh - 200px);
+   overflow-y: auto;
+    background-color: var(--vilagosbarna);
+}
+.bezar {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.elrejt {
+    display: none;
+    visibility: hidden;
 }

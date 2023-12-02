@@ -1,16 +1,13 @@
 import "./Galeria.css";
 export default function Galeria(props) {
-    function kivalaszt(element) {
-        console.log(element);
-        props.kivalaszt(element);
-    }
+   
     function bezar() {
         document
             .getElementsByClassName("admingaleria")[0]
             .classList.add("elrejt");
     }
     return (
-        <div className="admingaleria row arnyek elrejt" id="modal">
+        <div className="admingaleria row arnyek elrejt  felugro" >
             <header>
                 <h2>{props.cim}</h2>
                 <button className="bezar btn btn-danger" onClick={bezar}>

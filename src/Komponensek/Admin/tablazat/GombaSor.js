@@ -24,10 +24,10 @@ function GombaSor(props) {
             })}
             <td>
                 <button
-                    className="btn btn-success kepek"
+                    className="btn  kepek"
                     onClick={() => kepek()}
                 >
-                    Képek
+                🖼️ 
                 </button>
             </td>
             <td>

@@ -1,27 +1,10 @@
 .sor td span {
     display: block;
     max-height: 150px;
- min-width:120px;
+    min-width: 120px;
     overflow-y: auto;
- 
 }
 button.kepek {
-    font-size: 8pt;
+  /*   font-size: 8pt; */
 }
 
-/* Függőleges scrollbar */
-.sor ::-webkit-scrollbar {
-    width: 10px; /* scrollbar szélessége */
-  }
-  
-  .sor ::-webkit-scrollbar-thumb {
-    background-color: #cac0bd; /* scrollbar szín */
-    border-radius:5px;
-  
-  }
-  
-  .sor ::-webkit-scrollbar-track {
-    background-color: #f1eded; /* scrollbar háttérszín */
-    border-radius:5px;
-  }
-  
