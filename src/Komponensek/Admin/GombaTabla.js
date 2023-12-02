@@ -8,11 +8,14 @@ function GombaTabla(props) {
     function szerkeszt(index) {
         console.log(index);
     }
+    function kepmegjelenit(kepek, nev){
+        props.kepmegjelenit(kepek, nev)
+    }
     return (
         <div className="tablazat">
-            <table class="table table-striped">
+            <table className="table table-striped">
                 <thead>
-                    <GombaFejlecSor obj={props.lista[0]} />
+                    <GombaFejlecSor obj={props.leirolista}  />
                 </thead>
                 <tbody>
                     {props.lista.map((element, index) => {
@@ -21,8 +24,10 @@ function GombaTabla(props) {
                             <GombaSor
                                 key={index}
                                 obj={element}
+                                leiro={props.leirolista}
                                 torol={torol}
                                 szerkeszt={szerkeszt}
+                                kepmegjelenit={kepmegjelenit}
                             />
                         );
                     })}

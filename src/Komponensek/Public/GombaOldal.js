@@ -17,7 +17,7 @@ function GombaOldal(props) {
         props.leptet(props.index + 1);
     }
     return (
-        <div className="gomba">
+        <div className="gomba arnyek">
             <button className="bezar btn btn-danger" onClick={bezar}>
                 X
             </button>

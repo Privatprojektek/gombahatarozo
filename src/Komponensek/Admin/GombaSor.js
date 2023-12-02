@@ -1,3 +1,4 @@
+import "./GombaSor.css"
 function GombaSor(props) {
     function torol() {
         console.log(props.index);
@@ -8,31 +9,41 @@ function GombaSor(props) {
         props.szerkeszt(props.index);
     }
     function kepek() {
-        console.log(props.index);
+        
+        props.kepmegjelenit(props.obj.kepek, props.obj.nev)
        
     }
     return (
         <tr className="sor">
-            {Object.keys(props.obj).map((kulcs, index) => {
-                return (kulcs !== "src" && kulcs !== "kepek" ) ? (
-                    <td key={index}>{props.obj[kulcs]}</td>
+            {Object.keys(props.leiro).map((kulcs, index) => {
+                return props.leiro[kulcs].listazhato ? (
+                    <td key={index}><span>{props.obj[kulcs]}</span></td>
                 ) : (
                     ""
                 );
             })}
             <td>
-                <button className="btn kepek" onClick={() => kepek()}>
-                    Képek megtekintése
+                <button
+                    className="btn btn-success kepek"
+                    onClick={() => kepek()}
+                >
+                    Képek
                 </button>
             </td>
             <td>
-                <button className="btn torol" onClick={() => torol()}>
-                    Töröl
+                <button
+                    className="btn szerkeszt "
+                    onClick={() => szerkeszt()}
+                >
+                    ✏️
                 </button>
             </td>
             <td>
-                <button className="btn szerkeszt" onClick={() => szerkeszt()}>
-                    Szerkeszt
+                <button
+                    className="btn torol "
+                    onClick={() => torol()}
+                >
+                ❌
                 </button>
             </td>
         </tr>

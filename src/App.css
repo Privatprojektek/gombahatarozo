@@ -19,5 +19,9 @@
 .App-link:hover, .nav-link:hover {
     color: rgb(206, 107, 41) !important; 
 }
-
+.arnyek {
+    box-shadow: -2px 1px 10px 3px rgba(0,0,0,0.24);
+    -webkit-box-shadow: -2px 1px 10px 3px rgba(0,0,0,0.24);
+    -moz-box-shadow: -2px 1px 10px 3px rgba(0,0,0,0.24);
+}
 

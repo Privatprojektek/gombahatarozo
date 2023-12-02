@@ -24,7 +24,7 @@ export default function Public() {
         setAllapot(true);
     }
     return (
-        <main className="Public">
+        <main className="Public container">
         <aside>
         <Szuro />
         </aside>
@@ -38,7 +38,7 @@ export default function Public() {
                         leptet={leptet}
                     />
                 ) : (
-                    <GombaListaOldal lista={gombaAdat} kivalaszt={kivalaszt} />
+                    <GombaListaOldal lista={gombaAdat} kivalaszt={kivalaszt}   key={index} />
                 )}
             </article>
         </main>

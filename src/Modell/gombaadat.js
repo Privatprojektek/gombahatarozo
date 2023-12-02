@@ -14,7 +14,16 @@ export const gombaAdat = [
         ehetoseg:
             "ehető, Kellemes ízű, de kímélendő, ritka faj. Ha megtalálnánk, hagyjuk termőhelyén!",
         vedett: "Védett, ritka gomba",
-        kepek:["kepek/oriascsiperke/0.jpeg","kepek/oriascsiperke/1.jpeg","kepek/oriascsiperke/2.jpeg","kepek/oriascsiperke/3.jpeg","kepek/oriascsiperke/0.jpeg","kepek/oriascsiperke/1.jpeg","kepek/oriascsiperke/2.jpeg","kepek/oriascsiperke/3.jpeg"]
+        kepek: [
+            "kepek/oriascsiperke/0.jpeg",
+            "kepek/oriascsiperke/1.jpeg",
+            "kepek/oriascsiperke/2.jpeg",
+            "kepek/oriascsiperke/3.jpeg",
+            "kepek/oriascsiperke/0.jpeg",
+            "kepek/oriascsiperke/1.jpeg",
+            "kepek/oriascsiperke/2.jpeg",
+            "kepek/oriascsiperke/3.jpeg",
+        ],
     },
     {
         nev: "Nagy őzlábgomba",
@@ -28,9 +37,76 @@ export const gombaAdat = [
         termoido: "májustól novemberig",
         hely: "Lomberdőben, fenyvesben és füves területeken is előfordul; gyakran a ligetes, világos részeken, illetve erdőszéleken. Gyakran található például tölgy, bükk, akác, kéttűs fenyők és/vagy lucfenyő alkotta erdőkben, de erdőn kívül is.",
         eletmod: "Talajlakó szaprotróf",
-        ehetoseg:
-            "ehető, kellemes ízű",
+        ehetoseg: "ehető, kellemes ízű",
         vedett: "",
-        kepek:["kepek/nagyozlab/0.jpeg","kepek/nagyozlab/1.jpeg"]
+        kepek: ["kepek/nagyozlab/0.jpeg", "kepek/nagyozlab/1.jpeg"],
     },
 ];
+export const gombaAdatLeiro = {
+    nev: {
+        megj: "Név",
+        tipus: "text",
+        listazhato: true,
+    },
+    src: {
+        megj: "Kiemelet kép",
+        tipus: "file",
+        listazhato: false,
+    },
+    leiras: {
+        megj: "Leírás",
+        tipus: "textarea",
+        listazhato: true,
+    },
+    kalap: {
+        megj: "Kalap",
+        tipus: "textarea",
+        listazhato: true,
+    },
+    termoreteg: {
+        megj: "Termőréteg",
+        tipus: "textarea",
+        listazhato: true,
+    },
+    tonk: {
+        megj: "Tönk",
+        tipus: "textarea",
+        listazhato: true,
+    },
+    hus: {
+        megj: "Hús",
+        tipus: "textarea",
+        listazhato: true,
+    },
+
+    termoido: {
+        megj: "Termőidő",
+        tipus: "textarea",
+        listazhato: true,
+    },
+    hely: {
+        megj: "Élőhely",
+        tipus: "textarea",
+        listazhato: true,
+    },
+    eletmod: {
+        megj: "Életmód",
+        tipus: "textarea",
+        listazhato: true,
+    },
+    ehetoseg: {
+        megj: "Ehetőség",
+        tipus: "textarea",
+        listazhato: true,
+    },
+    vedett: {
+        megj: "Védettség",
+        tipus: "textarea",
+        listazhato: true,
+    },
+    kepek: {
+        megj: "Képek",
+        tipus: "filelist",
+        listazhato: false,
+    },
+};
