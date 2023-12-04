@@ -4,15 +4,22 @@ import { gombaAdatLeiro } from "../Modell/gombaadat.js";
 import "./Admin.css";
 import Galeria from "../Komponensek/Admin/Galeria";
 
-import { useState } from "react";
-import GombaUrlap from "../Komponensek/Admin/urlap/GombaUrlap.js";
+import { useState, useEffect } from "react";
+import Urlap from "../Komponensek/Admin/urlap/Urlap.js";
 
 export default function Admin() {
     const [kepLista, setKepLista] = useState(gombaAdat[0].kepek);
     const [cim, setCim] = useState(gombaAdat[0].nev);
 
-    const [urlapAdat, seturlapAdat] = useState({ });
-
+    const [urlapAdat, setUrlapAdat] = useState(initUresUrlap());
+   
+    function initUresUrlap(){
+        let a={}
+        Object.keys(gombaAdatLeiro).forEach((kulcs, index) => {
+            a[kulcs]=""
+         })
+         return {...a}
+    }
     function kepmegjelenit(kepek, nev) {
         setKepLista(kepek);
         setCim(nev);
@@ -27,7 +34,7 @@ export default function Admin() {
 
     function szerkeszt(index) {
         console.log(gombaAdat[index]);
-        seturlapAdat({...gombaAdat[index]});
+        setUrlapAdat({ ...gombaAdat[index] });
         console.log(urlapAdat);
         document.getElementById("urlap").classList.remove("elrejt");
     }
@@ -37,11 +44,9 @@ export default function Admin() {
     function bezar() {
         document.getElementById("urlap").classList.add("elrejt");
     }
-    function uj() {
-        let ures = {};
-        console.log(ures)
-        seturlapAdat({...ures}); 
-        console.log(urlapAdat)
+    function uj() {       
+        setUrlapAdat(initUresUrlap());
+        console.log(urlapAdat);
         document.getElementById("urlap").classList.remove("elrejt");
     }
     return (
@@ -59,7 +64,7 @@ export default function Admin() {
                         X
                     </button>
                 </header>
-                <GombaUrlap
+                <Urlap
                     leiro={gombaAdatLeiro}
                     adat={urlapAdat}
                     submitGomb={submitGomb}

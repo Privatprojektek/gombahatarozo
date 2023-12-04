@@ -1,48 +1,132 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import TextUrlapElem from "./TextUrlapElem";
+import TextareaUrlapElem from "./TextareaUrlapElem";
+import FileUrlapElem from "./FileUrlapElem";
+import SelectUrlapElem from "./SelectUrlapElem";
+import RadioUrlapElem from "./RadioUrlapElem";
+import CheckBoxUrlapElem from "./CheckBoxUrlapElem";
 
-export default function Urlap(props) {
-    const [urlapAdat, setUrlapAdat] = useState(props.adat);
-    function adatValt(event) {
-        setUrlapAdat(event.target.value);
-        console.log(urlapAdat, event.target.id);
-        // props.adatValt(urlapAdat, event.target.id);
-    }
-    function submitGomb(event) {
+export default function Urlap({ adat, leiro, submitGomb }) {
+    const [urlapAdat, setUrlapAdat] = useState(adat);
+    console.log(adat);
+    console.log(urlapAdat);
+    useEffect(() => {
+        setUrlapAdat(adat);
+    }, [adat]);
+
+    const inputElemList = [];
+
+    Object.keys(leiro).forEach((kulcs, index) => {
+        let tipus = leiro[kulcs].tipus;
+        let elem;
+        switch (tipus) {
+            case "text":
+                elem = (
+                    <TextUrlapElem
+                        key={index}
+                        kulcs={kulcs}
+                        obj={leiro[kulcs]}
+                        adatValt={adatValt}
+                        adat={urlapAdat[kulcs]}
+                    />
+                );
+                break;
+            case "file":
+                elem = (
+                    <FileUrlapElem
+                        key={index}
+                        kulcs={kulcs}
+                        obj={leiro[kulcs]}
+                        adatValt={adatValt}
+                        adat={urlapAdat[kulcs]}
+                    />
+                );
+                break;
+            case "select":
+                elem = (
+                    <SelectUrlapElem
+                        key={index}
+                        kulcs={kulcs}
+                        obj={leiro[kulcs]}
+                        adatValt={adatValt}
+                        adat={urlapAdat[kulcs]}
+                    />
+                );
+                break;
+            case "radio":
+                elem = (
+                    <RadioUrlapElem
+                        key={index}
+                        kulcs={kulcs}
+                        obj={leiro[kulcs]}
+                        adatValt={adatValt}
+                        adat={urlapAdat[kulcs]}
+                    />
+                );
+                break;
+            case "checkbox":
+                elem = (
+                    <CheckBoxUrlapElem
+                        key={index}
+                        kulcs={kulcs}
+                        obj={leiro[kulcs]}
+                        adatValt={adatValt}
+                        adat={urlapAdat[kulcs]}
+                    />
+                );
+                break;
+            case "textarea":
+                elem = (
+                    <TextareaUrlapElem
+                        key={index}
+                        kulcs={kulcs}
+                        obj={leiro[kulcs]}
+                        adatValt={adatValt}
+                        adat={urlapAdat[kulcs]}
+                    />
+                );
+                break;
+            default:
+                /*  elem = (
+                        <TextUrlapElem
+                            key={index}
+                            kulcs={kulcs}
+                            obj={leiro[kulcs]}
+                            adatValt={adatValt}
+                            adat={adat[kulcs]}
+                        />
+                    );  */
+                break;
+        }
+
+        inputElemList.push(elem);
+    });
+
+    function submitGomb1(event) {
+        //event.preventDefault();
         console.log(urlapAdat);
-        event.preventDefault();
-        props.submitGomb(urlapAdat);
+        submitGomb(urlapAdat);
+        let a = {};
+        setUrlapAdat({
+            ...a,
+        });
+    }
+    function adatValt(adat, id) {
+        let a = urlapAdat;
+        a[id] = adat;
+        console.log(a);
+        setUrlapAdat({
+            ...a,
+        });
+        console.log(urlapAdat);
     }
     return (
-        <>
-            <header>
-                <h2>Kérem adja meg az adatokat! </h2>
-                <button className="bezar btn btn-danger" onClick={()=> {
-                    document.getElementById("urlap").classList.add("elrejt");
-                }}>
-                    X
-                </button>
-            </header>
-            <form onSubmit={submitGomb}>
-                {Object.keys(props.leiro).map((kulcs, index) => {
-                    return (
-                        <div class="mb-3 mt-3" key={index}>
-                            <label for={kulcs} class="form-label">
-                                {props.leiro[kulcs].megj}
-                            </label>
-                            <input
-                                type={"text" /* props.leiro[kulcs].tipus */}
-                                class="form-control"
-                                id={kulcs}
-                                name={kulcs}
-                                value={props.adat[kulcs]}
-                                onChange={adatValt}
-                            />
-                        </div>
-                    );
-                })}
+        <form onSubmit={submitGomb1}>
+            {inputElemList.map((elem) => {
+                return elem;
+            })}
 
-                <input type="submit" class="btn btn-success" value="Küld" />
-            </form>
-        </>
+            <input type="submit" class="btn btn-success" value="Küld" />
+        </form>
     );
 }

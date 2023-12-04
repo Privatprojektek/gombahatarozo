@@ -2,18 +2,18 @@ export const gombaAdat = [
     {
         nev: "Óriás csiperke",
         src: "kepek/oriascsiperke/0.jpeg",
-        leiras: "Látványos, nagytermetű gomba, kellemesen mandulaillatú",
+        leiras: "Látványos, nagytermetű gomba, kellemesen mandulaillatú. ehető, Kellemes ízű, de kímélendő, ritka faj. Ha megtalálnánk, hagyjuk termőhelyén!",
         kalap: "Halvány okkeresbarna vagy krémszínű alapon koncentrikusan elhelyezkedő, sötétbarna pikkelyekkel sűrűn borított; közepén sötétbarna; szélén nyomásra sárguló; fiatalon kissé szögletesen félgömb alakú, majd domború, kiterülő kalap.",
         termoreteg:
             "Sűrű, szabadon álló, csak fiatalon fehéres, később szürkés, sötétbarnás lemezek",
         tonk: "Fejlett, hártyás, lelógó, nagy gallér, A gallér alatt pelyhes, pikkelyes, fehéres, nagyra növő tönk, Nagyra növő tönk",
         hus: "Kellemes mandula- vagy ánizsillatú; vastag, fehéres, vágásra többnyire nem színeződő vagy csak nagyon enyhén sárguló hús.",
-        termoido: "júniustól októberig",
+        termoido: " 6, 7, 8, 9, 10,",
         hely: "Lomb- és fenyőerdőben, főként humuszos talajon, erdőszélen, erdei utak mentén nő.",
-        eletmod: "Talajlakó szaprotróf",
+        eletmod: "talajlakó szaprotróf",
         ehetoseg:
-            "ehető, Kellemes ízű, de kímélendő, ritka faj. Ha megtalálnánk, hagyjuk termőhelyén!",
-        vedett: "Védett, ritka gomba",
+            "ehető, finom gomba",
+        vedett: "ritka, védett gomba",
         kepek: [
             "kepek/oriascsiperke/0.jpeg",
             "kepek/oriascsiperke/1.jpeg",
@@ -34,11 +34,11 @@ export const gombaAdat = [
             "Fehér színű, sűrűn és szabadon álló lemezei a tönk körül gyűrűszerűen összenőttek (kollárium).",
         tonk: "Tönkje kígyóbőrszerűen mintázott, hosszú, szívós, üreges, alja gumós. A kalapból csuklósan kifordítható.Fejlett, kétrétegű, pelyhes, eltolható gallér.",
         hus: "Mogyoróillatú, nem színeződő húsa a kalapban puha, a tönkben szívós, fás állagú.",
-        termoido: "májustól novemberig",
+        termoido: " 5, 6, 7, 8, 9, 10, 11",
         hely: "Lomberdőben, fenyvesben és füves területeken is előfordul; gyakran a ligetes, világos részeken, illetve erdőszéleken. Gyakran található például tölgy, bükk, akác, kéttűs fenyők és/vagy lucfenyő alkotta erdőkben, de erdőn kívül is.",
-        eletmod: "Talajlakó szaprotróf",
+        eletmod: "talajlakó szaprotróf",
         ehetoseg: "ehető, kellemes ízű",
-        vedett: "",
+        vedett: "nem védett",
         kepek: ["kepek/nagyozlab/0.jpeg", "kepek/nagyozlab/1.jpeg"],
     },
 ];
@@ -81,7 +81,8 @@ export const gombaAdatLeiro = {
 
     termoido: {
         megj: "Termőidő",
-        tipus: "textarea",
+        tipus: "checkbox",
+        lista:[1,2,3,4,5,6,7,8,9,10,11,12],
         listazhato: true,
     },
     hely: {
@@ -91,17 +92,20 @@ export const gombaAdatLeiro = {
     },
     eletmod: {
         megj: "Életmód",
-        tipus: "textarea",
+        tipus: "select",
+        lista:["Válassz...","talajlakó szaprotróf","korhadékbontó szaprotróf","gyökérkapcsolt (mikorrhizás)","parazita"],
         listazhato: true,
     },
     ehetoseg: {
         megj: "Ehetőség",
-        tipus: "textarea",
+        tipus: "radio",
+        lista:["ehető, finom gomba","ehető","feltételesen ehető","nem ehető","mérgező","halálosan mérgező"],
         listazhato: true,
     },
     vedett: {
         megj: "Védettség",
-        tipus: "textarea",
+        tipus: "radio",
+        lista:["nem védett","védett","ritka, védett gomba"],
         listazhato: true,
     },
     kepek: {

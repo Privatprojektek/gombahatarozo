@@ -9,18 +9,19 @@ export default function TextUrlapElem(props) {
       }, [props.adat]);
     
     function adatValt(event) {
-        setUrlapAdat(event.target.value)
+        //setUrlapAdat(event.target.value)
+        console.log(event.target.value, event.target.id);
         console.log(urlapAdat, event.target.id);
-        props.adatValt(urlapAdat, event.target.id);
+        props.adatValt(event.target.value, event.target.id);
     }
     return (
-        <div class="mb-3 mt-3" >
-            <label for={props.kulcs} class="form-label">
+        <div className="mb-3 mt-3" >
+            <label for={props.kulcs} className="form-label">
                 {props.obj.megj}
             </label>
             <input
                 type={props.obj.tipus}
-                class="form-control"
+                className="form-control"
                 id={props.kulcs}
                 name={props.kulcs}
                 value={urlapAdat}
