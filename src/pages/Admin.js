@@ -11,7 +11,7 @@ export default function Admin() {
     const [kepLista, setKepLista] = useState(gombaAdat[0].kepek);
     const [cim, setCim] = useState(gombaAdat[0].nev);
 
-    const [urlapAdat, seturlapAdat] = useState({nev:""});
+    const [urlapAdat, seturlapAdat] = useState({ nev: "Valami" });
 
     function kepmegjelenit(kepek, nev) {
         setKepLista(kepek);
@@ -27,20 +27,23 @@ export default function Admin() {
 
     function szerkeszt(index) {
         console.log(gombaAdat[index]);
-        console.log(gombaAdat);
-        console.log(index);
-        seturlapAdat(gombaAdat[index]);
+        let a = gombaAdat[index];
+       /*  seturlapAdat({ ...urlapAdat, a }); */
+        seturlapAdat({...gombaAdat[index]});
         console.log(urlapAdat);
-        uj();
+        document.getElementById("urlap").classList.remove("elrejt");
     }
     function torol(adat) {
         console.log(adat);
-        seturlapAdat(adat);
     }
     function bezar() {
         document.getElementById("urlap").classList.add("elrejt");
     }
     function uj() {
+        let ures = {nev: "Új gomba név"};
+        console.log(ures)
+        seturlapAdat({...ures}); 
+        console.log(urlapAdat)
         document.getElementById("urlap").classList.remove("elrejt");
     }
     return (
