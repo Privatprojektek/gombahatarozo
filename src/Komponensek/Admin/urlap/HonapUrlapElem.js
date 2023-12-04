@@ -1,8 +1,21 @@
 import { useState, useEffect } from "react";
 
-export default function CheckBoxUrlapElem(props) {
+export default function HonapUrlapElem(props) {
     const [urlapAdat, setUrlapAdat] = useState(props.adat);
-   
+    const honapLista = [
+        {label:"január",stilus:{"background-color":"rgb(250, 250, 250)","color":"darkred"}},
+        {label:"február",stilus:{"background-color":"rgb(250, 250, 250)","color":"darkred"}},
+        {label:"március.",stilus:{"background-color":"rgba(255, 225, 0, 0.583)","color":"darkred"}},
+        {label:"április",stilus:{"background-color":"rgba(255, 225, 0, 0.783)","color":"darkred"}},
+        {label:"május",stilus:{"background-color":"rgba(255, 225, 0, 0.983)","color":"darkred"}},
+        {label:"június",stilus:{"background-color":"rgba(118, 214, 27, 0.883)","color":"beige"}},
+        {label:"július",stilus:{"background-color":"rgba(118, 214, 27, 0.983)","color":"beige"}},
+        {label:"augusztus",stilus:{"background-color":"rgba(108, 198, 24, 0.883)","color":"beige"}},
+        {label:"szeptember",stilus:{"background-color":"rgba(231, 147, 36, 0.757)","color":"darkred"}},
+        {label:"október",stilus:{"background-color":"rgba(231, 147, 36, 0.857)","color":"darkred"}},
+        {label:"november",stilus:{"background-color":"rgba(231, 147, 36, 0.957)","color":"darkred"}},
+        {label:"december",stilus:{"background-color":"rgb(250, 250, 250)","color":"darkred"}},
+    ];
     console.log(props.adat);
     console.log(urlapAdat);
     useEffect(() => {
@@ -36,19 +49,23 @@ export default function CheckBoxUrlapElem(props) {
             {props.obj.lista.map((elem,index) => {
                 
                 return (
-                    <div className=" form-check   col-lg-4">
+                    <>
+                    <div className=" form-check   col-lg-4" style={honapLista[index].stilus}>
                         <input
                             type="checkbox"
-                            className="form-check-input"
+                            className="form-check-input m-1"
                             name={props.kulcs}
                             value={elem}
                             checked={urlapAdat.includes(` ${elem},`.toString())}
                             onChange={()=>adatValt(elem)}
                         />
                         <label for={elem} className="form-check-label">
-                            {elem}
+                            {honapLista[index].label}
                         </label>
+                       
                     </div>
+                     {(index%3===1)?<span></span>:""}
+                     </>
                 );
             })}
           

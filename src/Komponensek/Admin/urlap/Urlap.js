@@ -5,6 +5,7 @@ import FileUrlapElem from "./FileUrlapElem";
 import SelectUrlapElem from "./SelectUrlapElem";
 import RadioUrlapElem from "./RadioUrlapElem";
 import CheckBoxUrlapElem from "./CheckBoxUrlapElem";
+import HonapUrlapElem from "./HonapUrlapElem";
 
 export default function Urlap({ adat, leiro, submitGomb }) {
     const [urlapAdat, setUrlapAdat] = useState(adat);
@@ -75,6 +76,17 @@ export default function Urlap({ adat, leiro, submitGomb }) {
                     />
                 );
                 break;
+                case "honap":
+                    elem = (
+                        <HonapUrlapElem
+                            key={index}
+                            kulcs={kulcs}
+                            obj={leiro[kulcs]}
+                            adatValt={adatValt}
+                            adat={urlapAdat[kulcs]}
+                        />
+                    );
+                    break;
             case "textarea":
                 elem = (
                     <TextareaUrlapElem
