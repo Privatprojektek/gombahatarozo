@@ -1,21 +1,23 @@
 .gomba {
-    width:80%;
-    margin:auto;
+   /*  width:80%;
+    margin:auto; */
     position:relative;
-    padding: 50px;
-    margin:10px auto;
+     padding: 50px;
+   /* margin:10px auto; */
 
 }
 
 .gomba section {
     margin: 20px auto;
 }
+.gomba footer { 
+    font-weight:bold;
 
-.gomba header {
-    
-   
+}
+.gomba header, .gomba footer {    
     display:grid;
-    grid-template-columns: 50px 150px auto 100px 50px;
+    grid-template-columns:  50px auto 50px ;
+  
     text-align:center;
 }
 .gomba .bezar{
@@ -26,11 +28,6 @@
 
 .gomba img {
     width:100%;
-  
-   /*  border-radius:10px; */
-   
-    
-   
 }
 .gomba .kep {
     border-radius:3px;
@@ -50,11 +47,31 @@
     padding:10px;
     border-top:1px solid var(--kozepbarna);
 }
-.gomba ul li span:first-child{
+.gomba ul>li>span:first-child{
     text-align: right;
     padding-right:15px;
     font-weight: bold;
 }
+.gomba ul>li>div  {
+    text-align: center;
+}
 .gomba ul li:nth-child(odd){
     background-color: var(--vilagosbarna);
 }
+
+.gomba header.elozo, .gomba header.kovetkezo {
+   
+  padding:0px!important;
+  font-size: 30px!important;
+  font-weight:bold!important;
+
+ 
+}
+.gomba footer.elozo, .gomba footer.kovetkezo {
+   
+    padding:0px!important;
+    font-size: 10px!important;
+  
+   
+  }
+  

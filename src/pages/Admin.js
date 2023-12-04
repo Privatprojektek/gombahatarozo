@@ -4,7 +4,7 @@ import { gombaAdatLeiro } from "../Modell/gombaadat.js";
 import "./Admin.css";
 import Galeria from "../Komponensek/Admin/Galeria";
 
-import { useState, useEffect } from "react";
+import { useState, /* useEffect */ } from "react";
 import Urlap from "../Komponensek/Admin/urlap/Urlap.js";
 
 export default function Admin() {

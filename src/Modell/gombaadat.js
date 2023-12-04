@@ -6,7 +6,8 @@ export const gombaAdat = [
         kalap: "Halvány okkeresbarna vagy krémszínű alapon koncentrikusan elhelyezkedő, sötétbarna pikkelyekkel sűrűn borított; közepén sötétbarna; szélén nyomásra sárguló; fiatalon kissé szögletesen félgömb alakú, majd domború, kiterülő kalap.",
         termoreteg:
             "Sűrű, szabadon álló, csak fiatalon fehéres, később szürkés, sötétbarnás lemezek",
-        tonk: "Fejlett, hártyás, lelógó, nagy gallér, A gallér alatt pelyhes, pikkelyes, fehéres, nagyra növő tönk, Nagyra növő tönk",
+        tonk: "A gallér alatt pelyhes, pikkelyes, fehéres, nagyra növő tönk.",
+        galler: "Fejlett, hártyás, lelógó, nagy gallér ",
         hus: "Kellemes mandula- vagy ánizsillatú; vastag, fehéres, vágásra többnyire nem színeződő vagy csak nagyon enyhén sárguló hús.",
         termoido: " 6, 7, 8, 9, 10,",
         hely: "Lomb- és fenyőerdőben, főként humuszos talajon, erdőszélen, erdei utak mentén nő.",
@@ -32,7 +33,8 @@ export const gombaAdat = [
         kalap: "Fehéres alapszínű kalapját koncentrikus, durva, barna pikkelyek borítják, míg a kalap közepe barna. A tönkkel együtt fiatalon dobverőszerű, később esernyő formájú.",
         termoreteg:
             "Fehér színű, sűrűn és szabadon álló lemezei a tönk körül gyűrűszerűen összenőttek (kollárium).",
-        tonk: "Tönkje kígyóbőrszerűen mintázott, hosszú, szívós, üreges, alja gumós. A kalapból csuklósan kifordítható.Fejlett, kétrétegű, pelyhes, eltolható gallér.",
+        tonk: "Tönkje kígyóbőrszerűen mintázott, hosszú, szívós, üreges, alja gumós. A kalapból csuklósan kifordítható.",
+        galler: "Fejlett, kétrétegű, pelyhes, eltolható gallér.",
         hus: "Mogyoróillatú, nem színeződő húsa a kalapban puha, a tönkben szívós, fás állagú.",
         termoido: " 5, 6, 7, 8, 9, 10, 11",
         hely: "Lomberdőben, fenyvesben és füves területeken is előfordul; gyakran a ligetes, világos részeken, illetve erdőszéleken. Gyakran található például tölgy, bükk, akác, kéttűs fenyők és/vagy lucfenyő alkotta erdőkben, de erdőn kívül is.",
@@ -70,6 +72,11 @@ export const gombaAdatLeiro = {
     },
     tonk: {
         megj: "Tönk",
+        tipus: "textarea",
+        listazhato: true,
+    },
+    galler: {
+        megj: "Gallér",
         tipus: "textarea",
         listazhato: true,
     },

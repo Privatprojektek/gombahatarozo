@@ -2,48 +2,154 @@ import "./GombaOldal.css";
 import Galeria from "./Galeria";
 import React, { useState } from "react";
 function GombaOldal(props) {
+    const termoidoLista = props.gomba.termoido.split(",");
+    console.log(props.gomba.termoido);
+
+    const honapLista = [
+        {
+            label: "január",
+            stilus: {
+                "background-color": "rgb(250, 250, 250)",
+                color: "darkred",
+            },
+        },
+        {
+            label: "február",
+            stilus: {
+                "background-color": "rgb(250, 250, 250)",
+                color: "darkred",
+            },
+        },
+        {
+            label: "március",
+            stilus: {
+                "background-color": "rgba(255, 225, 0, 0.583)",
+                color: "darkred",
+            },
+        },
+        {
+            label: "április",
+            stilus: {
+                "background-color": "rgba(255, 225, 0, 0.783)",
+                color: "darkred",
+            },
+        },
+        {
+            label: "május",
+            stilus: {
+                "background-color": "rgba(255, 225, 0, 0.983)",
+                color: "darkred",
+            },
+        },
+        {
+            label: "június",
+            stilus: {
+                "background-color": "rgba(118, 214, 27, 0.883)",
+                color: "beige",
+            },
+        },
+        {
+            label: "július",
+            stilus: {
+                "background-color": "rgba(118, 214, 27, 0.983)",
+                color: "beige",
+            },
+        },
+        {
+            label: "augusztus",
+            stilus: {
+                "background-color": "rgba(108, 198, 24, 0.883)",
+                color: "beige",
+            },
+        },
+        {
+            label: "szeptember",
+            stilus: {
+                "background-color": "rgba(231, 147, 36, 0.757)",
+                color: "darkred",
+            },
+        },
+        {
+            label: "október",
+            stilus: {
+                "background-color": "rgba(231, 147, 36, 0.857)",
+                color: "darkred",
+            },
+        },
+        {
+            label: "november",
+            stilus: {
+                "background-color": "rgba(231, 147, 36, 0.957)",
+                color: "darkred",
+            },
+        },
+        {
+            label: "december",
+            stilus: {
+                "background-color": "rgb(250, 250, 250)",
+                color: "darkred",
+            },
+        },
+    ];
+    console.log(honapLista[Number(termoidoLista[0])].label);
+    termoidoLista.forEach((elem, index) => {
+        console.log(index);
+        console.log(elem);
+        console.log(termoidoLista[index]);
+        console.log(honapLista[Number(termoidoLista[4]) - 1]);
+    });
     const [aktKep, setaktKep] = useState(props.gomba.src);
-    function kivalaszt(element) {
-        console.log(element);
-        setaktKep(element);
-    }
-    function bezar() {
-        props.bezar();
-    }
-    function elozo() {
-        props.leptet(props.index - 1);
-    }
-    function kovetkezo() {
-        props.leptet(props.index + 1);
-    }
+
     return (
-        <div className="gomba arnyek">
-            <button className="bezar btn btn-danger" onClick={bezar}>
+        <div className="gomba arnyek container">
+            <button
+                className="bezar btn btn-danger"
+                onClick={() => {
+                    props.bezar();
+                }}
+            >
                 X
             </button>
             <header>
-                <span></span>
-                <button className="elozo btn btn-success" onClick={elozo}>
-                    Előző
+                <button
+                    className="elozo btn btn-success "
+                    onClick={() => {
+                        props.leptet(props.index - 1);
+                    }}
+                >
+                    &lt;
                 </button>
 
                 <h3>{props.gomba.nev}</h3>
                 <button
-                    className="kovetkezo btn btn-success"
-                    onClick={kovetkezo}
+                    className="kovetkezo btn btn-success "
+                    onClick={() => {
+                        props.leptet(props.index + 1);
+                    }}
                 >
-                    Következő
+                    &gt;
                 </button>
             </header>
             <section>
                 <div className="kep">
                     <img src={aktKep} alt={props.gomba.alt} />
                 </div>
-                <Galeria lista={props.gomba.kepek} kivalaszt={kivalaszt} />
-                </section>
-                <p>{props.gomba.leiras}</p>
-                <section>
+                <Galeria
+                    lista={props.gomba.kepek}
+                    kivalaszt={(element) => {
+                        setaktKep(element);
+                    }}
+                />
+            </section>
+            <p>{props.gomba.leiras}</p>
+            <section>
                 <ul>
+                   {/*  {Object.keys(props.gomba).map((kulcs) => {
+                        return   !(kulcs==="src" || kulcs==="kepek" || kulcs==="termoido")?(<li><span>{kulcs}</span><span>{props.gomba[kulcs]}</span></li>):(
+                            ""
+                        );
+                
+                    })} */}
                     <li>
                         <span>Kalap</span>
                         <span>{props.gomba.kalap}</span>
@@ -57,12 +163,40 @@ function GombaOldal(props) {
                         <span>{props.gomba.tonk}</span>
                     </li>
                     <li>
+                        <span>Gallér</span>
+                        <span>{props.gomba.galler}</span>
+                    </li>
+                    <li>
                         <span>Hús</span>
                         <span>{props.gomba.hus}</span>
                     </li>
                     <li>
                         <span>Termőidő</span>
-                        <span>{props.gomba.termoido}</span>
+                        <div className="row">
+                            {termoidoLista.map((elem, index) => {
+                                return (
+                                    <span
+                                        className="col-sm-6 col-md-4 col-lg-2"
+                                        style={
+                                            elem === "" || elem === " "
+                                                ? {}
+                                                : honapLista[
+                                                      Number(
+                                                          termoidoLista[index]
+                                                      ) - 1
+                                                  ].stilus
+                                        }
+                                    >
+                                        {elem === "" || elem === " "
+                                            ? ""
+                                            : honapLista[
+                                                  Number(termoidoLista[index]) -
+                                                      1
+                                              ].label}
+                                    </span>
+                                );
+                            })}
+                        </div>
                     </li>
                     <li>
                         <span>Kedvelt helyek</span>
@@ -82,6 +216,26 @@ function GombaOldal(props) {
                     </li>
                 </ul>
             </section>
+            <footer>
+                <button
+                    className="elozo btn btn-success "
+                    onClick={() => {
+                        props.leptet(props.index - 1);
+                    }}
+                >
+                    &lt;
+                </button>
+
+                <p>{props.gomba.nev}</p>
+                <button
+                    className="kovetkezo btn btn-success "
+                    onClick={() => {
+                        props.leptet(props.index + 1);
+                    }}
+                >
+                    &gt;
+                </button>
+            </footer>
         </div>
     );
 }
