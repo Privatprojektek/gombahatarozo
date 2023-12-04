@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 export default function TextareaUrlapElem(props) {
     const [urlapAdat, setUrlapAdat] = useState(props.adat);
+    console.log(props.adat)
+    console.log(urlapAdat)
+    useEffect(() => {
+        setUrlapAdat(props.adat);
+      }, [props.adat]);
+    
     function adatValt(event) {
         setUrlapAdat(event.target.value);
         console.log(urlapAdat, event.target.id);

@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import  { useState,useEffect, } from "react";
 
 export default function TextUrlapElem(props) {
     const [urlapAdat, setUrlapAdat] = useState(props.adat);
     console.log(props.adat)
     console.log(urlapAdat)
-    
-
+    useEffect(() => {
+        setUrlapAdat(props.adat);
+      }, [props.adat]);
     
     function adatValt(event) {
         setUrlapAdat(event.target.value)

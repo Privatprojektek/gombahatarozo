@@ -4,14 +4,14 @@ import { gombaAdatLeiro } from "../Modell/gombaadat.js";
 import "./Admin.css";
 import Galeria from "../Komponensek/Admin/Galeria";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import GombaUrlap from "../Komponensek/Admin/urlap/GombaUrlap.js";
 
 export default function Admin() {
     const [kepLista, setKepLista] = useState(gombaAdat[0].kepek);
     const [cim, setCim] = useState(gombaAdat[0].nev);
 
-    const [urlapAdat, seturlapAdat] = useState({ nev: "Valami" });
+    const [urlapAdat, seturlapAdat] = useState({ });
 
     function kepmegjelenit(kepek, nev) {
         setKepLista(kepek);
@@ -27,8 +27,6 @@ export default function Admin() {
 
     function szerkeszt(index) {
         console.log(gombaAdat[index]);
-        let a = gombaAdat[index];
-       /*  seturlapAdat({ ...urlapAdat, a }); */
         seturlapAdat({...gombaAdat[index]});
         console.log(urlapAdat);
         document.getElementById("urlap").classList.remove("elrejt");
@@ -40,7 +38,7 @@ export default function Admin() {
         document.getElementById("urlap").classList.add("elrejt");
     }
     function uj() {
-        let ures = {nev: "Új gomba név"};
+        let ures = {};
         console.log(ures)
         seturlapAdat({...ures}); 
         console.log(urlapAdat)
