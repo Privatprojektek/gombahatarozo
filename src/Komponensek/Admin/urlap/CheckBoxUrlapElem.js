@@ -25,8 +25,7 @@ export default function CheckBoxUrlapElem(props) {
             console.log(ujAdat)
         }
        
-        console.log(event.target.value, props.kulcs);
-        console.log(urlapAdat);
+       
         props.adatValt(ujAdat, props.kulcs);
     }
     return (
@@ -45,7 +44,7 @@ export default function CheckBoxUrlapElem(props) {
                             checked={urlapAdat.includes(` ${elem},`.toString())}
                             onChange={()=>adatValt(elem)}
                         />
-                        <label for={elem} className="form-check-label">
+                        <label htmlFor={elem} className="form-check-label">
                             {elem}
                         </label>
                     </div>

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 export default function TextareaUrlapElem(props) {
     const [urlapAdat, setUrlapAdat] = useState(props.adat);
-    console.log(props.adat);
-    console.log(urlapAdat);
-    useEffect(() => {
+   useEffect(() => {
         setUrlapAdat(props.adat);
     }, [props.adat]);
 
@@ -11,8 +9,8 @@ export default function TextareaUrlapElem(props) {
         props.adatValt(event.target.value, event.target.id);
     }
     return (
-        <div class="mb-3 mt-3">
-            <label for={props.kulcs} className="form-label">
+        <div className="mb-3 mt-3">
+            <label htmlFor={props.kulcs} className="form-label">
                 {props.obj.megj}
             </label>
             <textarea

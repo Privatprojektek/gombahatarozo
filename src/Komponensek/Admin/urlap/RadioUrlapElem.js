@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function RadioUrlapElem(props) {
     const [urlapAdat, setUrlapAdat] = useState(props.adat);
-    console.log(props.adat);
-    console.log(urlapAdat);
-    useEffect(() => {
+      useEffect(() => {
         setUrlapAdat(props.adat);
     }, [props.adat]);
 
@@ -17,9 +15,9 @@ export default function RadioUrlapElem(props) {
     return (
         <div className=" mb-3 mt-3">
             {props.obj.megj}
-            {props.obj.lista.map((elem) => {
+            {props.obj.lista.map((elem,index) => {
                 return (
-                    <div className=" form-check">
+                    <div className=" form-check" key={index}>
                         <input
                             type="radio"
                             className="form-check-input"
@@ -28,7 +26,7 @@ export default function RadioUrlapElem(props) {
                             checked={urlapAdat === elem}
                             onChange={adatValt}
                         />
-                        <label for={elem} className="form-check-label">
+                        <label htmlFor={elem} className="form-check-label">
                             {" "}
                             {elem}{" "}
                         </label>

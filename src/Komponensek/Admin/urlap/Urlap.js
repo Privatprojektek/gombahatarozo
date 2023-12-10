@@ -9,8 +9,7 @@ import HonapUrlapElem from "./HonapUrlapElem";
 
 export default function Urlap({ adat, leiro, submitGomb }) {
     const [urlapAdat, setUrlapAdat] = useState(adat);
-    console.log(adat);
-    console.log(urlapAdat);
+   
     useEffect(() => {
         setUrlapAdat(adat);
     }, [adat]);
@@ -138,7 +137,7 @@ export default function Urlap({ adat, leiro, submitGomb }) {
                 return elem;
             })}
 
-            <input type="submit" class="btn btn-success" value="Küld" />
+            <input type="submit" className="btn btn-success" value="Küld" />
         </form>
     );
 }

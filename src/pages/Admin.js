@@ -4,15 +4,23 @@ import { gombaAdatLeiro } from "../Modell/gombaadat.js";
 import "./Admin.css";
 import Galeria from "../Komponensek/Admin/Galeria";
 
-import { useState, /* useEffect */ } from "react";
+import { useState,  useEffect  } from "react";
 import Urlap from "../Komponensek/Admin/urlap/Urlap.js";
-
+import DataService from "../Modell/DataService.js";
+const dataService=new DataService();
 export default function Admin() {
     const [kepLista, setKepLista] = useState(gombaAdat[0].kepek);
     const [cim, setCim] = useState(gombaAdat[0].nev);
+    const [gombaLista, setGombaLista] = useState([]);
 
     const [urlapAdat, setUrlapAdat] = useState(initUresUrlap());
    
+    useEffect(() => {
+        dataService.getData("http://localhost:3001/gombaLista",setGombaLista)
+        
+      }, []);
+      
+
     function initUresUrlap(){
         let a={}
         Object.keys(gombaAdatLeiro).forEach((kulcs, index) => {
@@ -76,7 +84,7 @@ export default function Admin() {
 
             <article>
                 <GombaTabla
-                    lista={gombaAdat}
+                    lista={gombaLista}
                     leirolista={gombaAdatLeiro}
                     kepmegjelenit={kepmegjelenit}
                     torol={torol}

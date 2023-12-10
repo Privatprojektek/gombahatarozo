@@ -8,8 +8,8 @@ export default function FileUrlapElem(props) {
         props.adatValt(event.target.value, event.target.id);
     }
     return (
-        <div class="mb-3 mt-3" >
-            <label for={props.kulcs} class="form-label">
+        <div className="mb-3 mt-3" >
+            <label htmlFor={props.kulcs} className="form-label">
                 {props.obj.megj}
             </label>
             <input
