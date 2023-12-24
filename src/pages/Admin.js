@@ -34,7 +34,7 @@ export default function Admin() {
             .getElementsByClassName("admingaleria")[0]
             .classList.remove("elrejt");
     }
-    function submitGomb(adat, index) {
+    function submitGomb(adat) {
         console.log(adat);
         if (adat.id === undefined) {
             dataService.postData("gombaLista", adat);
@@ -43,21 +43,14 @@ export default function Admin() {
             dataService.putData("gombaLista", adat.id, adat);
             console.log("PUT")
         }
-        //dataService.getData("gombaLista",setGombaLista)
+     
     }
 
     function szerkeszt(index) {
         setUrlapAdat({ ...gombaLista[index] });
         document.getElementById("urlap").classList.remove("elrejt");
     }
-    function modosit(index, adat) {
-        console.log(index);
-        console.log(gombaLista[index]);
 
-        setUrlapAdat({ ...gombaLista[index] });
-        console.log(urlapAdat);
-        dataService.putData("gombaLista", gombaLista[index].id, adat);
-    }
     function torol(adat) {
         console.log(adat);
         dataService.deleteData("gombaLista", adat);
@@ -90,7 +83,7 @@ export default function Admin() {
                     leiro={gombaAdatLeiro}
                     adat={urlapAdat}
                     submitGomb={submitGomb}
-                    modosit={modosit}
+                   
                 />
             </section>
             <section>
