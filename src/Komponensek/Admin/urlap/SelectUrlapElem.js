@@ -18,6 +18,7 @@ export default function SelectUrlapElem(props) {
                 {props.obj.megj}     
             <select className="form-control"                           
                 value={urlapAdat}
+                id={props.kulcs}
                 onChange={adatValt}
             >
                 {props.obj.lista.map((elem, index) => {

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 export default function HonapUrlapElem(props) {
     const [urlapAdat, setUrlapAdat] = useState(props.adat);
+    console.log(urlapAdat)
+    console.log(props.adat)
     const honapLista = [
         {label:"január",stilus:{"backgroundColor":"rgb(250, 250, 250)","color":"darkred"}},
         {label:"február",stilus:{"backgroundColor":"rgb(250, 250, 250)","color":"darkred"}},
@@ -53,6 +55,7 @@ export default function HonapUrlapElem(props) {
                             className="form-check-input m-1"
                             name={props.kulcs}
                             value={elem}
+                            id={elem}
                             checked={urlapAdat.includes(` ${elem},`.toString())}
                             onChange={()=>adatValt(elem)}
                         />

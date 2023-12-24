@@ -1,43 +1,104 @@
-{"gombaLista":[
+{
+  "gombaLista": [
     {
-        "nev": "Óriás csiperke",
-        "src": "kepek/oriascsiperke/0.jpeg",
-        "leiras": "Látványos, nagytermetű gomba, kellemesen mandulaillatú. ehető, Kellemes ízű, de kímélendő, ritka faj. Ha megtalálnánk, hagyjuk termőhelyén!",
-        "kalap": "Halvány okkeresbarna vagy krémszínű alapon koncentrikusan elhelyezkedő, sötétbarna pikkelyekkel sűrűn borított; közepén sötétbarna; szélén nyomásra sárguló; fiatalon kissé szögletesen félgömb alakú, majd domború, kiterülő kalap.",
-        "termoreteg": "Sűrű, szabadon álló, csak fiatalon fehéres, később szürkés, sötétbarnás lemezek",
-        "tonk": "A gallér alatt pelyhes, pikkelyes, fehéres, nagyra növő tönk.",
-        "galler": "Fejlett, hártyás, lelógó, nagy gallér ",
-        "hus": "Kellemes mandula- vagy ánizsillatú; vastag, fehéres, vágásra többnyire nem színeződő vagy csak nagyon enyhén sárguló hús.",
-        "termoido": " 6, 7, 8, 9, 10,",
-        "hely": "Lomb- és fenyőerdőben, főként humuszos talajon, erdőszélen, erdei utak mentén nő.",
-        "eletmod": "talajlakó szaprotróf",
-        "ehetoseg": "ehető, finom gomba",
-        "vedett": "ritka, védett gomba",
-        "kepek": [
-            "kepek/oriascsiperke/0.jpeg",
-            "kepek/oriascsiperke/1.jpeg",
-            "kepek/oriascsiperke/2.jpeg",
-            "kepek/oriascsiperke/3.jpeg",
-            "kepek/oriascsiperke/0.jpeg",
-            "kepek/oriascsiperke/1.jpeg",
-            "kepek/oriascsiperke/2.jpeg",
-            "kepek/oriascsiperke/3.jpeg"
-        ]
+      "id": 0,
+      "nev": "Óriás csiperke",
+      "src": "kepek/oriascsiperke/0.jpeg",
+      "leiras": "Látványos, nagytermetű gomba, kellemesen mandulaillatú. ehető, Kellemes ízű, de kímélendő, ritka faj. Ha megtalálnánk, hagyjuk termőhelyén!",
+      "kalap": "Halvány okkeresbarna vagy krémszínű alapon koncentrikusan elhelyezkedő, sötétbarna pikkelyekkel sűrűn borított; közepén sötétbarna; szélén nyomásra sárguló; fiatalon kissé szögletesen félgömb alakú, majd domború, kiterülő kalap.",
+      "termoreteg": "Sűrű, szabadon álló, csak fiatalon fehéres, később szürkés, sötétbarnás lemezek",
+      "tonk": "A gallér alatt pelyhes, pikkelyes, fehéres, nagyra növő tönk.",
+      "galler": "Fejlett, hártyás, lelógó, nagy gallér ",
+      "hus": "Kellemes mandula- vagy ánizsillatú; vastag, fehéres, vágásra többnyire nem színeződő vagy csak nagyon enyhén sárguló hús.",
+      "termoido": " 6, 7, 8, 9, 10,",
+      "hely": "Lomb- és fenyőerdőben, főként humuszos talajon, erdőszélen, erdei utak mentén nő.",
+      "eletmod": "talajlakó szaprotróf",
+      "ehetoseg": "ehető, finom gomba",
+      "vedett": "ritka, védett gomba",
+      "kepek": [
+        "kepek/oriascsiperke/0.jpeg",
+        "kepek/oriascsiperke/1.jpeg",
+        "kepek/oriascsiperke/2.jpeg",
+        "kepek/oriascsiperke/3.jpeg",
+        "kepek/oriascsiperke/0.jpeg",
+        "kepek/oriascsiperke/1.jpeg",
+        "kepek/oriascsiperke/2.jpeg",
+        "kepek/oriascsiperke/3.jpeg"
+      ]
     },
     {
-        "nev": "Nagy őzlábgomba",
-        "src": "kepek/nagyozlab/0.jpeg",
-        "leiras": "Látványos, nagytermetű gomba, kellemesen mogyoró illatú és ízű.",
-        "kalap": "Fehéres alapszínű kalapját koncentrikus, durva, barna pikkelyek borítják, míg a kalap közepe barna. A tönkkel együtt fiatalon dobverőszerű, később esernyő formájú.",
-        "termoreteg": "Fehér színű, sűrűn és szabadon álló lemezei a tönk körül gyűrűszerűen összenőttek (kollárium).",
-        "tonk": "Tönkje kígyóbőrszerűen mintázott, hosszú, szívós, üreges, alja gumós. A kalapból csuklósan kifordítható.",
-        "galler": "Fejlett, kétrétegű, pelyhes, eltolható gallér.",
-        "hus": "Mogyoróillatú, nem színeződő húsa a kalapban puha, a tönkben szívós, fás állagú.",
-        "termoido": " 5, 6, 7, 8, 9, 10, 11",
-        "hely": "Lomberdőben, fenyvesben és füves területeken is előfordul; gyakran a ligetes, világos részeken, illetve erdőszéleken. Gyakran található például tölgy, bükk, akác, kéttűs fenyők és/vagy lucfenyő alkotta erdőkben, de erdőn kívül is.",
-        "eletmod": "talajlakó szaprotróf",
-        "ehetoseg": "ehető, kellemes ízű",
-        "vedett": "nem védett",
-        "kepek": ["kepek/nagyozlab/0.jpeg", "kepek/nagyozlab/1.jpeg"]
+      "id": 1,
+      "nev": "Nagy őzlábgomba",
+      "src": "kepek/nagyozlab/0.jpeg",
+      "leiras": "Látványos, nagytermetű gomba, kellemesen mogyoró illatú és ízű.",
+      "kalap": "Fehéres alapszínű kalapját koncentrikus, durva, barna pikkelyek borítják, míg a kalap közepe barna. A tönkkel együtt fiatalon dobverőszerű, később esernyő formájú.",
+      "termoreteg": "Fehér színű, sűrűn és szabadon álló lemezei a tönk körül gyűrűszerűen összenőttek (kollárium).",
+      "tonk": "Tönkje kígyóbőrszerűen mintázott, hosszú, szívós, üreges, alja gumós. A kalapból csuklósan kifordítható.",
+      "galler": "Fejlett, kétrétegű, pelyhes, eltolható gallér.",
+      "hus": "Mogyoróillatú, nem színeződő húsa a kalapban puha, a tönkben szívós, fás állagú.",
+      "termoido": " 5, 6, 7, 8, 9, 10, 11",
+      "hely": "Lomberdőben, fenyvesben és füves területeken is előfordul; gyakran a ligetes, világos részeken, illetve erdőszéleken. Gyakran található például tölgy, bükk, akác, kéttűs fenyők és/vagy lucfenyő alkotta erdőkben, de erdőn kívül is.",
+      "eletmod": "talajlakó szaprotróf",
+      "ehetoseg": "ehető, finom gomba",
+      "vedett": "nem védett",
+      "kepek": [
+        "kepek/nagyozlab/0.jpeg",
+        "kepek/nagyozlab/1.jpeg"
+      ]
+    },
+    {
+      "id": 4,
+      "nev": "Próba gomba",
+      "src": "kepek/nagyozlab/0.jpeg",
+      "leiras": "Látványos, nagytermetű gomba, kellemesen mogyoró illatú és ízű.",
+      "kalap": "Fehéres alapszínű kalapját koncentrikus, durva, barna pikkelyek borítják, míg a kalap közepe barna. A tönkkel együtt fiatalon dobverőszerű, később esernyő formájú.",
+      "termoreteg": "Fehér színű, sűrűn és szabadon álló lemezei a tönk körül gyűrűszerűen összenőttek (kollárium).",
+      "tonk": "Tönkje kígyóbőrszerűen mintázott, hosszú, szívós, üreges, alja gumós. A kalapból csuklósan kifordítható.",
+      "galler": "Fejlett, kétrétegű, pelyhes, eltolható gallér.",
+      "hus": "Mogyoróillatú, nem színeződő húsa a kalapban puha, a tönkben szívós, fás állagú.",
+      "termoido": " 5, 6, 7, 8, 9, 10, 11",
+      "hely": "Lomberdőben, fenyvesben és füves területeken is előfordul; gyakran a ligetes, világos részeken, illetve erdőszéleken. Gyakran található például tölgy, bükk, akác, kéttűs fenyők és/vagy lucfenyő alkotta erdőkben, de erdőn kívül is.",
+      "eletmod": "talajlakó szaprotróf",
+      "ehetoseg": "ehető, kellemes ízű",
+      "vedett": "nem védett",
+      "kepek": [
+        "kepek/nagyozlab/0.jpeg",
+        "kepek/nagyozlab/1.jpeg"
+      ]
+    },
+    {
+      "nev": "aaa",
+      "src": "",
+      "leiras": "DFDSFSFDF",
+      "kalap": "",
+      "termoreteg": "",
+      "tonk": "",
+      "galler": "",
+      "hus": "",
+      "termoido": "",
+      "hely": "",
+      "eletmod": "",
+      "ehetoseg": "",
+      "vedett": "",
+      "kepek": "",
+      "id": 5
+    },
+    {
+      "nev": "gffdsf",
+      "src": "",
+      "leiras": "fdfdfs",
+      "kalap": "FSDFSFSFS",
+      "termoreteg": "",
+      "tonk": "",
+      "galler": "",
+      "hus": "",
+      "termoido": "",
+      "hely": "",
+      "eletmod": "",
+      "ehetoseg": "",
+      "vedett": "",
+      "kepek": "",
+      "id": 7
     }
-]}
+  ]
+}

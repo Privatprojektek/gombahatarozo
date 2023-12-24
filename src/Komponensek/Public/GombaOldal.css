@@ -74,4 +74,17 @@
   
    
   }
+
+  @media screen and (max-width:500px) {
+    .gomba ul li{
+       
+        grid-template-columns: 1fr;
+      
+    }
+    .gomba ul>li>span:first-child{
+        text-align: left;   
+       
+    }
+ 
+  }
   

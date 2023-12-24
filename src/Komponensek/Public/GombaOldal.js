@@ -3,100 +3,100 @@ import Galeria from "./Galeria";
 import React, { useState } from "react";
 function GombaOldal(props) {
     const termoidoLista = props.gomba.termoido.split(",");
-    console.log(props.gomba.termoido);
+   /*  console.log(props.gomba.termoido); */
 
     const honapLista = [
         {
             label: "január",
             stilus: {
-                "background-color": "rgb(250, 250, 250)",
+                "backgroundColor": "rgb(250, 250, 250)",
                 color: "darkred",
             },
         },
         {
             label: "február",
             stilus: {
-                "background-color": "rgb(250, 250, 250)",
+                "backgroundColor": "rgb(250, 250, 250)",
                 color: "darkred",
             },
         },
         {
             label: "március",
             stilus: {
-                "background-color": "rgba(255, 225, 0, 0.583)",
+                "backgroundColor": "rgba(255, 225, 0, 0.583)",
                 color: "darkred",
             },
         },
         {
             label: "április",
             stilus: {
-                "background-color": "rgba(255, 225, 0, 0.783)",
+                "backgroundColor": "rgba(255, 225, 0, 0.783)",
                 color: "darkred",
             },
         },
         {
             label: "május",
             stilus: {
-                "background-color": "rgba(255, 225, 0, 0.983)",
+                "backgroundColor": "rgba(255, 225, 0, 0.983)",
                 color: "darkred",
             },
         },
         {
             label: "június",
             stilus: {
-                "background-color": "rgba(118, 214, 27, 0.883)",
+                "backgroundColor": "rgba(118, 214, 27, 0.883)",
                 color: "beige",
             },
         },
         {
             label: "július",
             stilus: {
-                "background-color": "rgba(118, 214, 27, 0.983)",
+                "backgroundColor": "rgba(118, 214, 27, 0.983)",
                 color: "beige",
             },
         },
         {
             label: "augusztus",
             stilus: {
-                "background-color": "rgba(108, 198, 24, 0.883)",
+                "backgroundColor": "rgba(108, 198, 24, 0.883)",
                 color: "beige",
             },
         },
         {
             label: "szeptember",
             stilus: {
-                "background-color": "rgba(231, 147, 36, 0.757)",
+                "backgroundColor": "rgba(231, 147, 36, 0.757)",
                 color: "darkred",
             },
         },
         {
             label: "október",
             stilus: {
-                "background-color": "rgba(231, 147, 36, 0.857)",
+                "backgroundColor": "rgba(231, 147, 36, 0.857)",
                 color: "darkred",
             },
         },
         {
             label: "november",
             stilus: {
-                "background-color": "rgba(231, 147, 36, 0.957)",
+                "backgroundColor": "rgba(231, 147, 36, 0.957)",
                 color: "darkred",
             },
         },
         {
             label: "december",
             stilus: {
-                "background-color": "rgb(250, 250, 250)",
+                "backgroundColor": "rgb(250, 250, 250)",
                 color: "darkred",
             },
         },
     ];
-    console.log(honapLista[Number(termoidoLista[0])].label);
+   /*  console.log(honapLista[Number(termoidoLista[0])].label); */
     termoidoLista.forEach((elem, index) => {
-        console.log(index);
+        /* console.log(index);
         console.log(elem);
         console.log(termoidoLista[index]);
-        console.log(honapLista[Number(termoidoLista[4]) - 1]);
+        console.log(honapLista[Number(termoidoLista[4]) - 1]); */
     });
     const [aktKep, setaktKep] = useState(props.gomba.src);
 

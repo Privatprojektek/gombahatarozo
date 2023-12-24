@@ -40,6 +40,7 @@ export default function CheckBoxUrlapElem(props) {
                             type="checkbox"
                             className="form-check-input"
                             name={props.kulcs}
+                            id={elem}
                             value={elem}
                             checked={urlapAdat.includes(` ${elem},`.toString())}
                             onChange={()=>adatValt(elem)}

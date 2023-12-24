@@ -30,6 +30,7 @@ function GombaTabla(props) {
                                 leiro={props.leirolista}
                                 torol={torol}
                                 szerkeszt={szerkeszt}
+                               
                                 kepmegjelenit={kepmegjelenit}
                             />
                         );

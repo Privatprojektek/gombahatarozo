@@ -23,6 +23,7 @@ export default function RadioUrlapElem(props) {
                             className="form-check-input"
                             name={props.kulcs}
                             value={elem}
+                            id={elem}
                             checked={urlapAdat === elem}
                             onChange={adatValt}
                         />

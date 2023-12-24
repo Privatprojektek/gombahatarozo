@@ -1,8 +1,8 @@
 import "./GombaSor.css"
 function GombaSor(props) {
     function torol() {
-        console.log(props.index);
-        props.torol(props.index);
+        console.log(props.obj.id);
+        props.torol(props.obj.id);
     }
     function szerkeszt() {
         console.log(props.index);

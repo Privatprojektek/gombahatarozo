@@ -4,29 +4,27 @@ import { gombaAdatLeiro } from "../Modell/gombaadat.js";
 import "./Admin.css";
 import Galeria from "../Komponensek/Admin/Galeria";
 
-import { useState,  useEffect  } from "react";
+import { useState, useEffect } from "react";
 import Urlap from "../Komponensek/Admin/urlap/Urlap.js";
 import DataService from "../Modell/DataService.js";
-const dataService=new DataService();
+const dataService = new DataService();
 export default function Admin() {
     const [kepLista, setKepLista] = useState(gombaAdat[0].kepek);
     const [cim, setCim] = useState(gombaAdat[0].nev);
     const [gombaLista, setGombaLista] = useState([]);
 
     const [urlapAdat, setUrlapAdat] = useState(initUresUrlap());
-   
-    useEffect(() => {
-        dataService.getData("http://localhost:3001/gombaLista",setGombaLista)
-        
-      }, []);
-      
 
-    function initUresUrlap(){
-        let a={}
+    useEffect(() => {
+        dataService.getData("gombaLista", setGombaLista);
+    }, []);
+
+    function initUresUrlap() {
+        let a = {};
         Object.keys(gombaAdatLeiro).forEach((kulcs, index) => {
-            a[kulcs]=""
-         })
-         return {...a}
+            a[kulcs] = "";
+        });
+        return { ...a };
     }
     function kepmegjelenit(kepek, nev) {
         setKepLista(kepek);
@@ -36,23 +34,39 @@ export default function Admin() {
             .getElementsByClassName("admingaleria")[0]
             .classList.remove("elrejt");
     }
-    function submitGomb(adat) {
+    function submitGomb(adat, index) {
         console.log(adat);
+        if (adat.id === undefined) {
+            dataService.postData("gombaLista", adat);
+            console.log("POST")
+        } else {
+            dataService.putData("gombaLista", adat.id, adat);
+            console.log("PUT")
+        }
+        //dataService.getData("gombaLista",setGombaLista)
     }
 
     function szerkeszt(index) {
-        console.log(gombaAdat[index]);
-        setUrlapAdat({ ...gombaAdat[index] });
-        console.log(urlapAdat);
+        setUrlapAdat({ ...gombaLista[index] });
         document.getElementById("urlap").classList.remove("elrejt");
+    }
+    function modosit(index, adat) {
+        console.log(index);
+        console.log(gombaLista[index]);
+
+        setUrlapAdat({ ...gombaLista[index] });
+        console.log(urlapAdat);
+        dataService.putData("gombaLista", gombaLista[index].id, adat);
     }
     function torol(adat) {
         console.log(adat);
+        dataService.deleteData("gombaLista", adat);
+        //dataService.getData("gombaLista",setGombaLista)
     }
     function bezar() {
         document.getElementById("urlap").classList.add("elrejt");
     }
-    function uj() {       
+    function uj() {
         setUrlapAdat(initUresUrlap());
         console.log(urlapAdat);
         document.getElementById("urlap").classList.remove("elrejt");
@@ -76,6 +90,7 @@ export default function Admin() {
                     leiro={gombaAdatLeiro}
                     adat={urlapAdat}
                     submitGomb={submitGomb}
+                    modosit={modosit}
                 />
             </section>
             <section>
