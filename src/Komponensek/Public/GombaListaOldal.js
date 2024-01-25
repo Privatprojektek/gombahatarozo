@@ -19,6 +19,7 @@ function GombaListaOldal(props) {
                                 className="rounded"
                             />
                         </div>
+                        <span className="">{element.src}</span>
                         <span className="nev card-footer">{element.nev}</span>
                     </div>
                 );
