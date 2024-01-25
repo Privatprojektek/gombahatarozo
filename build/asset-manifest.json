@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.0020fe32.css",
-    "main.js": "/static/js/main.b3523f23.js",
-    "static/js/787.2d958307.chunk.js": "/static/js/787.2d958307.chunk.js",
-    "index.html": "/index.html",
-    "main.0020fe32.css.map": "/static/css/main.0020fe32.css.map",
-    "main.b3523f23.js.map": "/static/js/main.b3523f23.js.map",
-    "787.2d958307.chunk.js.map": "/static/js/787.2d958307.chunk.js.map"
+    "main.css": "/gombahatarozo/build/static/css/main.0020fe32.css",
+    "main.js": "/gombahatarozo/build/static/js/main.de0b9f59.js",
+    "static/js/787.2d958307.chunk.js": "/gombahatarozo/build/static/js/787.2d958307.chunk.js",
+    "index.html": "/gombahatarozo/build/index.html",
+    "main.0020fe32.css.map": "/gombahatarozo/build/static/css/main.0020fe32.css.map",
+    "main.de0b9f59.js.map": "/gombahatarozo/build/static/js/main.de0b9f59.js.map",
+    "787.2d958307.chunk.js.map": "/gombahatarozo/build/static/js/787.2d958307.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0020fe32.css",
-    "static/js/main.b3523f23.js"
+    "static/js/main.de0b9f59.js"
   ]
 }
