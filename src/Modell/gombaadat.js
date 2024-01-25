@@ -1,7 +1,7 @@
 export const gombaAdat = [
     {
         nev: "Óriás csiperkeeeeee",
-        src: "/kepek/oriascsiperke/0.jpeg",
+        src: "%PUBLIC_URL%/kepek/oriascsiperke/0.jpeg",
         leiras: "Látványos, nagytermetű gomba, kellemesen mandulaillatú. ehető, Kellemes ízű, de kímélendő, ritka faj. Ha megtalálnánk, hagyjuk termőhelyén!",
         kalap: "Halvány okkeresbarna vagy krémszínű alapon koncentrikusan elhelyezkedő, sötétbarna pikkelyekkel sűrűn borított; közepén sötétbarna; szélén nyomásra sárguló; fiatalon kissé szögletesen félgömb alakú, majd domború, kiterülő kalap.",
         termoreteg:
@@ -12,8 +12,7 @@ export const gombaAdat = [
         termoido: " 6, 7, 8, 9, 10,",
         hely: "Lomb- és fenyőerdőben, főként humuszos talajon, erdőszélen, erdei utak mentén nő.",
         eletmod: "talajlakó szaprotróf",
-        ehetoseg:
-            "ehető, finom gomba",
+        ehetoseg: "ehető, finom gomba",
         vedett: "ritka, védett gomba",
         kepek: [
             "kepek/oriascsiperke/0.jpeg",
@@ -89,7 +88,7 @@ export const gombaAdatLeiro = {
     termoido: {
         megj: "Termőidő",
         tipus: "honap",
-        lista:[1,2,3,4,5,6,7,8,9,10,11,12],
+        lista: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         listazhato: true,
     },
     hely: {
@@ -100,19 +99,32 @@ export const gombaAdatLeiro = {
     eletmod: {
         megj: "Életmód",
         tipus: "select",
-        lista:["Válassz...","talajlakó szaprotróf","korhadékbontó szaprotróf","gyökérkapcsolt (mikorrhizás)","parazita"],
+        lista: [
+            "Válassz...",
+            "talajlakó szaprotróf",
+            "korhadékbontó szaprotróf",
+            "gyökérkapcsolt (mikorrhizás)",
+            "parazita",
+        ],
         listazhato: true,
     },
     ehetoseg: {
         megj: "Ehetőség",
         tipus: "radio",
-        lista:["ehető, finom gomba","ehető","feltételesen ehető","nem ehető","mérgező","halálosan mérgező"],
+        lista: [
+            "ehető, finom gomba",
+            "ehető",
+            "feltételesen ehető",
+            "nem ehető",
+            "mérgező",
+            "halálosan mérgező",
+        ],
         listazhato: true,
     },
     vedett: {
         megj: "Védettség",
         tipus: "radio",
-        lista:["nem védett","védett","ritka, védett gomba"],
+        lista: ["nem védett", "védett", "ritka, védett gomba"],
         listazhato: true,
     },
     kepek: {
