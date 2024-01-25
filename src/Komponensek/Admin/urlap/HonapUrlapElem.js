@@ -22,7 +22,7 @@ export default function HonapUrlapElem(props) {
         setUrlapAdat(props.adat);
     }, [props.adat]);
 
-    function adatValt(elem) {
+    function adatValt(event,elem) {
         elem=+" "+elem+","
         let ujAdat = urlapAdat;
       
