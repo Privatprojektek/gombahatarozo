@@ -1,5 +1,6 @@
 {
-  "name": "webaruhaz",
+  "name": "Gombahatározó",
+  "homepage": "https://privatprojektek.github.io/gombahatarozo/build",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
