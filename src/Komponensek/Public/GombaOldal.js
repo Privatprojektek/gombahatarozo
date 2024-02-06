@@ -98,7 +98,7 @@ function GombaOldal(props) {
         console.log(termoidoLista[index]);
         console.log(honapLista[Number(termoidoLista[4]) - 1]); */
     });
-    const [aktKep, setaktKep] = useState("%PUBLIC_URL%" + props.gomba.src);
+    const [aktKep, setaktKep] = useState(props.gomba.src);
 
     return (
         <div className="gomba arnyek container">
@@ -132,7 +132,7 @@ function GombaOldal(props) {
             </header>
             <section>
                 <div className="kep">
-                    <img src={aktKep} alt={props.gomba.alt} />
+                    <img src={process.env.PUBLIC_URL + "/" + aktKep} alt={props.gomba.alt} />
                 </div>
                 <Galeria
                     lista={props.gomba.kepek}

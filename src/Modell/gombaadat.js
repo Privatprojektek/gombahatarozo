@@ -1,7 +1,7 @@
 export const gombaAdat = [
     {
         nev: "Óriás csiperkeeeeee",
-        src: "/kepek/oriascsiperke/0.jpeg",
+        src: "kepek/oriascsiperke/0.jpeg",
         leiras: "Látványos, nagytermetű gomba, kellemesen mandulaillatú. ehető, Kellemes ízű, de kímélendő, ritka faj. Ha megtalálnánk, hagyjuk termőhelyén!",
         kalap: "Halvány okkeresbarna vagy krémszínű alapon koncentrikusan elhelyezkedő, sötétbarna pikkelyekkel sűrűn borított; közepén sötétbarna; szélén nyomásra sárguló; fiatalon kissé szögletesen félgömb alakú, majd domború, kiterülő kalap.",
         termoreteg:

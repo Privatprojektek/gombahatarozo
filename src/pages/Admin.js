@@ -11,7 +11,7 @@ const dataService = new DataService();
 export default function Admin() {
     const [kepLista, setKepLista] = useState(gombaAdat[0].kepek);
     const [cim, setCim] = useState(gombaAdat[0].nev);
-    const [gombaLista, setGombaLista] = useState([]);
+    const [gombaLista, setGombaLista] = useState([...gombaAdat]);
 
     const [urlapAdat, setUrlapAdat] = useState(initUresUrlap());
 

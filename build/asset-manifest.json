@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.0020fe32.css",
-    "main.js": "/static/js/main.76b24745.js",
-    "static/js/787.2d958307.chunk.js": "/static/js/787.2d958307.chunk.js",
-    "index.html": "/index.html",
-    "main.0020fe32.css.map": "/static/css/main.0020fe32.css.map",
-    "main.76b24745.js.map": "/static/js/main.76b24745.js.map",
-    "787.2d958307.chunk.js.map": "/static/js/787.2d958307.chunk.js.map"
+    "main.css": "/gombahatarozo_build2/static/css/main.0020fe32.css",
+    "main.js": "/gombahatarozo_build2/static/js/main.e3f44012.js",
+    "static/js/787.2d958307.chunk.js": "/gombahatarozo_build2/static/js/787.2d958307.chunk.js",
+    "index.html": "/gombahatarozo_build2/index.html",
+    "main.0020fe32.css.map": "/gombahatarozo_build2/static/css/main.0020fe32.css.map",
+    "main.e3f44012.js.map": "/gombahatarozo_build2/static/js/main.e3f44012.js.map",
+    "787.2d958307.chunk.js.map": "/gombahatarozo_build2/static/js/787.2d958307.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0020fe32.css",
-    "static/js/main.76b24745.js"
+    "static/js/main.e3f44012.js"
   ]
 }
