@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate   } from "react-router-dom";
 import Admin from "./pages/Admin"
 import Public from "./pages/Public"
 import NoPage from "./pages/NoPage"
@@ -16,6 +16,7 @@ function App() {
         <Route path="admin" element={<Admin />} />
         <Route path="public" element={<Public />} />
         <Route path="*" element={<NoPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
     </BrowserRouter>
