@@ -14,7 +14,7 @@ function Galeria(props) {
                         onClick={() => kivalaszt(element)}
                     >
                         <img
-                            src={element}
+                            src={process.env.PUBLIC_URL + "/" + element}
                             alt="gomba"
                         />
                     </div>

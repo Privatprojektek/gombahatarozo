@@ -132,7 +132,7 @@ function GombaOldal(props) {
             </header>
             <section>
                 <div className="kep">
-                    <img src={aktKep} alt={props.gomba.alt} />
+                    <img src={process.env.PUBLIC_URL + "/" + aktKep} alt={props.gomba.alt} />
                 </div>
                 <Galeria
                     lista={props.gomba.kepek}

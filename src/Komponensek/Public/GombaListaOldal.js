@@ -14,7 +14,7 @@ function GombaListaOldal(props) {
                     >
                         <div className="card-body ">
                             <img
-                                src={element.src}
+                                src={process.env.PUBLIC_URL + "/" + element.src}
                                 alt={element.alt}
                                 className="rounded"
                             />
