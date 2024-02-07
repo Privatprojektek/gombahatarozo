@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/gombahatarozo/static/css/main.0020fe32.css",
-    "main.js": "/gombahatarozo/static/js/main.2d26beb0.js",
+    "main.js": "/gombahatarozo/static/js/main.3f2d16d8.js",
     "static/js/787.2d958307.chunk.js": "/gombahatarozo/static/js/787.2d958307.chunk.js",
     "index.html": "/gombahatarozo/index.html",
     "main.0020fe32.css.map": "/gombahatarozo/static/css/main.0020fe32.css.map",
-    "main.2d26beb0.js.map": "/gombahatarozo/static/js/main.2d26beb0.js.map",
+    "main.3f2d16d8.js.map": "/gombahatarozo/static/js/main.3f2d16d8.js.map",
     "787.2d958307.chunk.js.map": "/gombahatarozo/static/js/787.2d958307.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0020fe32.css",
-    "static/js/main.2d26beb0.js"
+    "static/js/main.3f2d16d8.js"
   ]
 }
