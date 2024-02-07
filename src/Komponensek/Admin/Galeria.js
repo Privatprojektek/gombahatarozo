@@ -23,7 +23,7 @@ export default function Galeria(props) {
                         >
                             <img
                                 className="img-thumbnail"
-                                src={process.env.PUBLIC_URL + "/" + element}
+                                src={element}
                                 alt="gomba"
                             />
                         </div>
